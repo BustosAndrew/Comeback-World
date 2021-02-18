@@ -33,26 +33,6 @@ nav a:hover {
     padding: 10px;
 }
 
-#signup {
-    margin-top: 20px;
-    margin-right: 43%;
-    margin-left: 43%;
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-#signup:hover {
-    color: gray;
-}
-
-#signup p {
-    background-color: tomato;
-    border-radius: 10px;
-    padding: 10%;
-}
-
 .left {
     flex: 10%;
     text-align: center;
@@ -78,51 +58,4 @@ nav {
     border-left-width: 0;
     border-bottom-width: 0.00001px;
     overflow: hidden;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-}
-
-aside {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-aside div {
-    min-width: 10px;
-    margin-top: 100px;
-    margin-right: 1%;
-    margin-left: 1%;
-    background-color: tomato;
-    border-radius: 10px;
-    text-align: center;
-    padding: 10%;
-    box-shadow: 2px 10px 25px black;
-}
-
-#ex1 {
-    flex: 50%;
-}
-
-#ex2 {
-    flex: 50%;
-}
-
-footer {
-    margin-top: 5%;
-    margin-bottom: 0;
-    border: 0.1px solid gray;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    border-top-width: 0.00001px;
-    padding-bottom: 5%;
-}
-
-footer p {
-    color: whitesmoke;
-    padding-top: 5%;
 }

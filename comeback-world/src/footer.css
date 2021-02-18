@@ -1,0 +1,15 @@
+footer {
+    margin-top: 5%;
+    margin-bottom: 0;
+    border: 0.1px solid gray;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-width: 0.00001px;
+    padding-bottom: 5%;
+}
+
+footer p {
+    color: whitesmoke;
+    padding-top: 5%;
+}
