@@ -1,0 +1,50 @@
+#signup {
+    margin-top: 20px;
+    margin-right: 43%;
+    margin-left: 43%;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#signup:hover {
+    color: gray;
+}
+
+#signup p {
+    background-color: tomato;
+    border-radius: 10px;
+    padding: 10%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+aside div {
+    min-width: 10px;
+    margin-top: 100px;
+    margin-right: 1%;
+    margin-left: 1%;
+    background-color: tomato;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10%;
+    box-shadow: 2px 10px 25px black;
+}
+
+#ex1 {
+    flex: 50%;
+}
+
+#ex2 {
+    flex: 50%;
+}

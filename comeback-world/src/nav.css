@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 1em;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+#login {
+    flex: 10%;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    align-self: flex-start;
+    font-size: 20px;
+}
+
+#login h3 {
+    background-color: tomato;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.left {
+    flex: 10%;
+    text-align: center;
+}
+
+.middle {
+    flex: 10%;
+    text-align: left;
+}
+
+.right {
+    flex: 70%;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border: 0.1px solid gray;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0.00001px;
+    overflow: hidden;
+}
