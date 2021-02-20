@@ -1,16 +1,49 @@
 const express = require('express');
 const validator = require('validator');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require('../models/User');
-const responseDTO = require('../utils/responseDTO');
 const ResponseDTO = require('../utils/responseDTO');
+const validateToken = require('../middlewares/validateToken');
 
 const saltRounds = 10;
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 
-router.get('/', (req, res) => {
-    res.send('hello');
-});
+/**
+ *
+ * @param {express.Response} res - express response object
+ * @param {User} user - the user being passed in
+ *
+ * this function writes the token to httpOnly cookies
+ * so that validateToken middleware can check to see
+ * if user is authenticated for endpoints that requires authentication
+ */
+const assignToken = (res, user) => {
+    const payload = {
+        fullName: user.fullName,
+        sub: user._id,
+        username: user.username,
+    };
+
+    const accessToken = jwt.sign({ payload }, ACCESS_TOKEN_SECRET);
+    return res.cookie('accessToken', accessToken, { httpOnly: true });
+};
+
+/**
+ * User Registration Endpoint:
+ * 
+ * POST('/users/register')
+ * with json body:
+ * {
+    "email": "ryan@example.com",
+    "fullName": "Ryan H",
+    "username": "213edu",
+    "password": "123qwe",
+    "password2": "123qwe"
+    }
+ * 
+ */
 
 router.post('/register', async (req, res) => {
     const {
@@ -70,11 +103,15 @@ router.post('/register', async (req, res) => {
                     username: username.trim(),
                 })
                     .then((newUser) => {
+                        // assign user token, then return user as object
+                        // user is logged in at this point
+                        assignToken(res, newUser);
                         res.json(new ResponseDTO(newUser, true));
                     })
                     .catch((mongoError) => {
+                        console.error(mongoError);
                         res.status(500).json(
-                            new ResponseDTO(null, false, [mongoError]),
+                            new ResponseDTO(null, false, mongoError),
                         );
                     });
             },
@@ -86,4 +123,43 @@ router.post('/register', async (req, res) => {
     }
 });
 
+router.post('/login', async (req, res) => {
+    const {
+        username, //
+        password,
+    } = req.body;
+
+    // locate the user in the database
+    const user = await User.findOne({ username });
+
+    // if user found
+    if (user) {
+        // check user's password
+        const match = await bcrypt.compare(password, user.password);
+
+        if (match) {
+            // logs user in
+            assignToken(res, user);
+            res.json(new ResponseDTO(user, true));
+        } else {
+            res.json(new ResponseDTO(null, false, ['Incorrect Password']));
+        }
+    }
+});
+
+/**
+ * User Login Endpoint:
+ * 
+ * POST('/users/login')
+ * with json body:
+ * {
+    "username": "213edu",
+    "password": "123qwe",
+    }
+ * 
+ */
+
+router.get('/test', validateToken, (req, res) => {
+    res.json(req.user);
+});
 module.exports = router;
