@@ -11,23 +11,23 @@ export const signup = () => {
             <section className="signup-sect">
                 <h2 id="title">Sign Up</h2>
                 <form onSubmit={handleSubmit}>
-                    <label for="fullname">Name:</label>
+                    <label htmlFor="fullname">Name:</label>
                     <br />
                     <input type="text" id="signup-fullname" name="fullname" />
                     <br />
-                    <label for="username">Username:</label>
+                    <label htmlFor="username">Username:</label>
                     <br />
                     <input type="text" id="username" name="username" />
                     <br />
-                    <label for="password">Password:</label>
+                    <label htmlFor="password">Password:</label>
                     <br />
                     <input type="text" id="password" name="password" />
                     <br />
-                    <label for="password2">Re-enter Password:</label>
+                    <label htmlFor="password2">Re-enter Password:</label>
                     <br />
                     <input type="text" id="password2" name="password2" />
                     <br />
-                    <label for="email">Email:</label>
+                    <label htmlFor="email">Email:</label>
                     <br />
                     <input type="text" id="email" name="email" />
                     <br />
