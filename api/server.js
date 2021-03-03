@@ -7,7 +7,7 @@ const logger = require('morgan');
 
 // express config
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // express middlewares
 app.use(logger('dev'));
