@@ -19,15 +19,26 @@ const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
  * so that validateToken middleware can check to see
  * if user is authenticated for endpoints that requires authentication
  */
-const assignToken = (res, user) => {
+const assignToken = (res, user, maxAge = 2 * 7 * 24 * 60 * 60 * 1000) => {
     const payload = {
         fullName: user.fullName,
         sub: user._id,
+        iat: Date.now(),
         username: user.username,
     };
 
     const accessToken = jwt.sign({ payload }, ACCESS_TOKEN_SECRET);
-    return res.cookie('accessToken', accessToken, { httpOnly: true });
+    return res.cookie('accessToken', accessToken, {
+        httpOnly: true,
+        maxAge: maxAge,
+    });
+};
+
+const clearToken = (res) => {
+    return res.cookie('accessToken', 0, {
+        httpOnly: true,
+        maxAge: 0,
+    });
 };
 
 /**
@@ -123,6 +134,17 @@ router.post('/register', async (req, res) => {
     }
 });
 
+/**
+ * User Login Endpoint:
+ * 
+ * POST('/users/login')
+ * with json body:
+ * {
+    "username": "213edu",
+    "password": "123qwe",
+    }
+ * 
+ */
 router.post('/login', async (req, res) => {
     const {
         username, //
@@ -148,17 +170,23 @@ router.post('/login', async (req, res) => {
 });
 
 /**
- * User Login Endpoint:
- * 
- * POST('/users/login')
- * with json body:
- * {
-    "username": "213edu",
-    "password": "123qwe",
-    }
- * 
+ * User Logout Endpoint:
+ *
+ * POST('/users/logout')
+ *  - clears user's accesstoken
  */
+router.post('/logout', (req, res) => {
+    clearToken(res);
+    return res.json(new ResponseDTO(null, true));
+});
 
+/**
+ * User Test Endpoint:
+ *
+ * GET('/users/test')
+ *  - returns user if user is logged in
+ *  - else returns error
+ */
 router.get('/test', validateToken, (req, res) => {
     res.json(req.user);
 });
