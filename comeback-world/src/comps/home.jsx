@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
-        <div>
+        <div className="home">
             <section style={{ textAlign: 'center', paddingTop: '20px' }}>
                 <h1 style={{ color: 'whitesmoke' }}>
                     Welcome to Comeback World

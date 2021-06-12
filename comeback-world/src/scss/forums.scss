@@ -1,0 +1,170 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    min-height: 50vh;
+    background-image: url('../img/mesh-gradient.png');
+    background-size: cover;
+    .menu {
+        margin: 5%;
+        float: left;
+        flex: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .thread-container {
+        margin: 5%;
+        float: right;
+        flex: 80%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($color: white, $alpha: 0.2);
+        border: solid 1px transparent;
+        background-clip: padding-box;
+        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.06),
+            inset 0px 15px 100px rgba($color: #000000, $alpha: 0.24);
+        border-radius: 25px;
+    }
+    p {
+        color: white;
+        font-weight: bolder;
+    }
+}
+
+@supports (backdrop-filter: none) {
+    .thread-container {
+        backdrop-filter: blur(100px);
+    }
+}
+
+.thrd {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    height: 100px;
+    border-bottom: solid 1px #6f0303;
+}
+
+.threads {
+    display: flex;
+    flex-direction: column;
+}
+
+.thread-nav {
+    margin-top: auto;
+    padding: 1% 20%;
+    text-align: center;
+}
+
+#thread-prev {
+}
+
+#thread-next {
+}
+
+#thread-pgs {
+    position: relative;
+    text-align: center;
+}
+
+#filter {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    border: solid 1px #6f0303;
+    border-radius: 10px;
+    padding: 0.5% 0.3%;
+    padding-bottom: 0;
+    hr {
+        margin-top: 10%;
+        width: 30px;
+        background-color: #6f0303;
+        border: none;
+        height: 1px;
+        margin-bottom: 25%;
+    }
+}
+
+#upvote {
+    margin: auto;
+    margin-left: 5%;
+    height: 25px;
+    width: 25px;
+}
+
+.forums-home {
+    border-radius: 20px;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border: solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.06),
+        inset 0px 9px 25px rgba($color: #000000, $alpha: 0.19);
+    padding: 25% 0;
+    text-align: center;
+}
+
+#home-link {
+    margin: auto 32%;
+}
+
+.forums-profile {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border: solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.06),
+        inset 0px 9px 25px rgba($color: #000000, $alpha: 0.19);
+    align-self: center;
+    p {
+        text-align: center;
+        margin: 42% auto;
+        padding: auto;
+    }
+}
+
+#view-profile {
+    margin: 0 auto;
+}
+
+.forums-create {
+    padding: 11%;
+    border-radius: 20px;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border: solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.06),
+        inset 0px 9px 25px rgba($color: #000000, $alpha: 0.19);
+    p {
+        text-align: center;
+    }
+}
+
+#create-link {
+    margin: 0 10%;
+    margin-top: 5%;
+}
+
+.forum-link {
+    text-decoration: none;
+}
+
+.login-status {
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+#view-status {
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.view-threads {
+    text-align: center;
+}
+
+#view-link {
+    margin: 0 auto;
+}
