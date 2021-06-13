@@ -5,7 +5,7 @@ import { signup as SignUp } from './signup';
 import Login from './login';
 import { error as Error } from './error';
 import { nav as Nav } from './nav';
-import { forums as Forums } from './forums';
+import { Forums as Forums } from './forums';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export const main_router = () => {

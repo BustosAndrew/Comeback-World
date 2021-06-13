@@ -1,7 +1,7 @@
-.container {
+.forums-container {
     display: flex;
     flex-direction: row;
-    min-height: 50vh;
+    min-height: 100vh;
     background-image: url('../img/mesh-gradient.png');
     background-size: cover;
     .menu {
@@ -46,6 +46,23 @@
     border-bottom: solid 1px #6f0303;
 }
 
+.upvote {
+    margin: auto;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 27px;
+    width: auto;
+    flex: 2%;
+}
+
+.thrd-content {
+    flex: 98%;
+    span {
+        font-weight: normal;
+        color: white;
+    }
+}
+
 .threads {
     display: flex;
     flex-direction: column;
@@ -53,14 +70,23 @@
 
 .thread-nav {
     margin-top: auto;
-    padding: 1% 20%;
+    padding: 2% 20%;
     text-align: center;
 }
 
 #thread-prev {
+    display: inline-block;
+    &:hover {
+        cursor: pointer;
+    }
+    margin-right: 5%;
 }
 
 #thread-next {
+    display: inline;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 #thread-pgs {
@@ -74,8 +100,16 @@
     right: 3%;
     border: solid 1px #6f0303;
     border-radius: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.filter-closed {
     padding: 0.5% 0.3%;
     padding-bottom: 0;
+    z-index: 2;
     hr {
         margin-top: 10%;
         width: 30px;
@@ -86,11 +120,29 @@
     }
 }
 
-#upvote {
-    margin: auto;
-    margin-left: 5%;
-    height: 25px;
-    width: 25px;
+.filter-opened {
+    position: relative;
+    font-size: xx-large;
+    z-index: 3;
+}
+
+.filter-options {
+    z-index: 3;
+}
+
+.filter-hide {
+    display: none;
+}
+
+.filter-popup {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    z-index: 2;
+    border-radius: 20px;
 }
 
 .forums-home {
