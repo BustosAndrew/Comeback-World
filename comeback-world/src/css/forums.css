@@ -1,11 +1,11 @@
-.container {
+.forums-container {
   display: flex;
   flex-direction: row;
-  min-height: 50vh;
+  min-height: 100vh;
   background-image: url("../img/mesh-gradient.png");
   background-size: cover;
 }
-.container .menu {
+.forums-container .menu {
   margin: 5%;
   float: left;
   flex: 20%;
@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.container .thread-container {
+.forums-container .thread-container {
   margin: 5%;
   float: right;
   flex: 80%;
@@ -25,7 +25,7 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 15px 100px rgba(0, 0, 0, 0.24);
   border-radius: 25px;
 }
-.container p {
+.forums-container p {
   color: white;
   font-weight: bolder;
 }
@@ -44,6 +44,23 @@
   border-bottom: solid 1px #6f0303;
 }
 
+.upvote {
+  margin: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 27px;
+  width: auto;
+  flex: 2%;
+}
+
+.thrd-content {
+  flex: 98%;
+}
+.thrd-content span {
+  font-weight: normal;
+  color: white;
+}
+
 .threads {
   display: flex;
   flex-direction: column;
@@ -51,16 +68,34 @@
 
 .thread-nav {
   margin-top: auto;
-  padding: 1% 20%;
+  padding: 2% 20%;
   text-align: center;
+}
+
+#thread-prev {
+  display: inline-block;
+  margin-right: 5%;
+  color: #6f0303;
+}
+#thread-prev:hover {
+  cursor: pointer;
+}
+
+#thread-next {
+  display: inline;
+  color: #6f0303;
+}
+#thread-next:hover {
+  cursor: pointer;
 }
 
 #thread-pgs {
   position: relative;
   text-align: center;
+  color: #6f0303;
 }
 
-#filter {
+.filter-closed {
   position: absolute;
   top: 2%;
   right: 3%;
@@ -68,8 +103,12 @@
   border-radius: 10px;
   padding: 0.5% 0.3%;
   padding-bottom: 0;
+  z-index: 2;
 }
-#filter hr {
+.filter-closed:hover {
+  cursor: pointer;
+}
+.filter-closed hr {
   margin-top: 10%;
   width: 30px;
   background-color: #6f0303;
@@ -78,11 +117,41 @@
   margin-bottom: 25%;
 }
 
-#upvote {
-  margin: auto;
-  margin-left: 5%;
-  height: 25px;
-  width: 25px;
+.filter-opened {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: xx-large;
+  z-index: 3;
+}
+.filter-opened:hover {
+  cursor: pointer;
+}
+
+.filter-options {
+  z-index: 3;
+}
+
+.hide-border {
+  border: none;
+}
+
+.filter-hide-hrs {
+  display: none;
+}
+
+.filter-popup {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: solid 1px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 15px 100px rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+  z-index: 2;
+  text-align: left;
 }
 
 .forums-home {
