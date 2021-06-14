@@ -31,6 +31,18 @@ export const main_router = () => {
                 <Route path="/login">
                     <Login />
                 </Route>
+                <Route path="/create-thread">
+                    <div>create new thread</div>
+                </Route>
+                <Route path="/user-profile">
+                    <div>your profile</div>
+                </Route>
+                <Route path="/user-status">
+                    <div>your login status</div>
+                </Route>
+                <Route path="/user-threads">
+                    <div>your thread</div>
+                </Route>
                 <Route path="*">
                     <Error />
                 </Route>

@@ -8,7 +8,11 @@ export const Forums = () => {
     return (
         <div className="forums-container">
             <div className="menu">
-                <Link id="view-profile" className="forum-link" to="/user-prof">
+                <Link
+                    id="view-profile"
+                    className="forum-link"
+                    to="/user-profile"
+                >
                     <div className="forums-profile">
                         <p>PROFILE</p>
                     </div>
@@ -26,7 +30,11 @@ export const Forums = () => {
                         VIEW YOUR<br></br>THREADS
                     </p>
                 </Link>
-                <Link id="create-link" className="forum-link" to="/create">
+                <Link
+                    id="create-link"
+                    className="forum-link"
+                    to="/create-thread"
+                >
                     <div className="forums-create">
                         <p>CREATE THREAD</p>
                     </div>
