@@ -35,21 +35,53 @@ export const Forums = () => {
             <div className="thread-container">
                 <div className="threads">
                     <div
-                        id="filter"
-                        className={openPopup ? null : 'filter-closed'}
+                        className={openPopup ? 'hide-border' : 'filter-closed'}
                         onClick={() => setOpenPopup(!openPopup)}
                     >
-                        <hr className={openPopup ? 'filter-hide' : null} />
-                        <hr className={openPopup ? 'filter-hide' : null} />
-                        <hr className={openPopup ? 'filter-hide' : null} />
+                        <hr className={openPopup ? 'filter-hide-hrs' : null} />
+                        <hr className={openPopup ? 'filter-hide-hrs' : null} />
+                        <hr className={openPopup ? 'filter-hide-hrs' : null} />
                         {openPopup ? (
                             <div className="filter-opened">
                                 <span className="">&#10005;</span>
                             </div>
                         ) : null}
                     </div>
-                    <div className={openPopup ? 'filter-popup' : 'filter-hide'}>
-                        joe
+                    <div
+                        className={
+                            openPopup ? 'filter-popup' : 'filter-hide-hrs'
+                        }
+                    >
+                        <ul
+                            style={{
+                                display: 'inline-block',
+                                listStyle: 'none',
+                                color: '#6f0303',
+                            }}
+                        >
+                            <li>Filter by age or most upvoted.</li>
+                            <br />
+                        </ul>
+                        <ul
+                            style={{
+                                display: 'inline-block',
+                                listStyle: 'none',
+                                color: '#6f0303',
+                            }}
+                        >
+                            <li>
+                                <input type="checkbox"></input>
+                                <label>Most Upvoted</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"></input>
+                                <label>Newest</label>
+                            </li>
+                            <li>
+                                <input type="checkbox"></input>
+                                <label>Oldest</label>
+                            </li>
+                        </ul>
                     </div>
                     <div className="thrd">
                         <img className="upvote" src="upvote.png" />
