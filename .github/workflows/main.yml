@@ -1,28 +1,26 @@
 name: Lint
 
-on:
-  [push, pull_request]
+on: [push, pull_request]
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
 
-    steps:
-    - uses: actions/checkout@v2
+            - name: Installing Front End Dependencies
+              working-directory: ./comeback-world
+              run: npm ci
 
-    - name: Installing Front End Dependencies
-      working-directory: ./comeback-world
-      run: npm ci
+            - name: Front End Linter
+              working-directory: ./client
+              run: npx eslint ./src --ext .js
 
-    - name: Front End Linter
-      working-directory: ./comeback-world
-      run: npx eslint ./src --ext .js
-        
-    - name: Installing Back End Dependencies
-      working-directory: ./api
-      run: npm ci
-    
-    - name: Backend Linter
-      working-directory: ./api
-      run: npx eslint . --ext .js
+            - name: Installing Back End Dependencies
+              working-directory: ./api
+              run: npm ci
+
+            - name: Backend Linter
+              working-directory: ./api
+              run: npx eslint . --ext .js
