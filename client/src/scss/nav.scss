@@ -2,21 +2,6 @@
     margin: 0;
 }
 
-nav a {
-    text-decoration: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: whitesmoke;
-    font-size: 18px;
-    display: inline-block;
-    line-height: 1em;
-}
-
-nav a:hover {
-    color: gray;
-}
-
 #login {
     flex: 10%;
     text-decoration: none;
@@ -25,12 +10,14 @@ nav a:hover {
     margin-right: 10px;
     align-self: flex-start;
     font-size: 20px;
-}
-
-#login h3 {
-    background-color: tomato;
-    border-radius: 10px;
-    padding: 10px;
+    h3 {
+        background-color: rgba($color: white, $alpha: 0.15);
+        border: solid 2px rgba($color: white, $alpha: 0.4);
+        backdrop-filter: blur(5px);
+        box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.1);
+        border-radius: 25px;
+        padding: 10px;
+    }
 }
 
 .left {
@@ -58,4 +45,17 @@ nav {
     border-left-width: 0;
     border-bottom-width: 0.00001px;
     overflow: hidden;
+    a {
+        text-decoration: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: whitesmoke;
+        font-size: 18px;
+        display: inline-block;
+        line-height: 1em;
+    }
+    &:hover {
+        color: gray;
+    }
 }

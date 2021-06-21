@@ -1,6 +1,6 @@
 import { Home } from './home';
 import { About } from './about';
-import { comeback_gen as Comeback_Gen } from './comeback_gen';
+import { Comeback_gen as Comeback_Gen } from './comeback_gen';
 import { signup as SignUp } from './signup';
 import Login from './login';
 import { error as Error } from './error';
