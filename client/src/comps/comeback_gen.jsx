@@ -41,6 +41,8 @@ export const Comeback_gen = () => {
                         </div>
                     ))}
                 </section>
+                <aside>gen</aside>
+                <section>output</section>
             </main>
         </div>
     );
