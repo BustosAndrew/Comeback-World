@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe5733eb.chunk.css",
+    "main.js": "/static/js/main.48962cb7.chunk.js",
+    "main.js.map": "/static/js/main.48962cb7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42527610.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42527610.js.map",
+    "static/js/2.ba686678.chunk.js": "/static/js/2.ba686678.chunk.js",
+    "static/js/2.ba686678.chunk.js.map": "/static/js/2.ba686678.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fe5733eb.chunk.css.map": "/static/css/main.fe5733eb.chunk.css.map",
+    "static/js/2.ba686678.chunk.js.LICENSE.txt": "/static/js/2.ba686678.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/mesh-gradient.7d2cf67c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42527610.js",
+    "static/js/2.ba686678.chunk.js",
+    "static/css/main.fe5733eb.chunk.css",
+    "static/js/main.48962cb7.chunk.js"
+  ]
+}

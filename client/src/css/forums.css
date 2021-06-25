@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  background-image: url("../img/mesh-gradient.png");
-  background-size: cover;
 }
 .forums-container .menu {
   margin: 5%;
@@ -19,10 +17,10 @@
   flex: 80%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 15px 100px rgba(0, 0, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
 }
 .forums-container p {
@@ -41,7 +39,6 @@
   text-align: left;
   width: 100%;
   height: 100px;
-  border-bottom: solid 1px #6f0303;
 }
 
 .upvote {
@@ -75,7 +72,7 @@
 #thread-prev {
   display: inline-block;
   margin-right: 5%;
-  color: #6f0303;
+  color: #ffa984;
 }
 #thread-prev:hover {
   cursor: pointer;
@@ -83,7 +80,7 @@
 
 #thread-next {
   display: inline;
-  color: #6f0303;
+  color: #ffa984;
 }
 #thread-next:hover {
   cursor: pointer;
@@ -92,14 +89,14 @@
 #thread-pgs {
   position: relative;
   text-align: center;
-  color: #6f0303;
+  color: #ffa984;
 }
 
 .filter-closed {
   position: absolute;
   top: 2%;
   right: 3%;
-  border: solid 1px #6f0303;
+  border: solid 1px #ffa984;
   border-radius: 10px;
   padding: 0.5% 0.3%;
   padding-bottom: 0;
@@ -111,7 +108,7 @@
 .filter-closed hr {
   margin-top: 10%;
   width: 30px;
-  background-color: #6f0303;
+  background-color: #ffa984;
   border: none;
   height: 1px;
   margin-bottom: 25%;
@@ -145,10 +142,10 @@
   top: 1%;
   right: 2%;
   padding: 5%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 15px 100px rgba(0, 0, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   z-index: 2;
   text-align: left;
@@ -156,10 +153,11 @@
 
 .forums-home {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 9px 25px rgba(0, 0, 0, 0.19);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
   padding: 25% 0;
   text-align: center;
 }
@@ -172,10 +170,10 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 9px 25px rgba(0, 0, 0, 0.19);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   align-self: center;
 }
 .forums-profile p {
@@ -191,10 +189,11 @@
 .forums-create {
   padding: 11%;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: solid 1px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.06), inset 0px 9px 25px rgba(0, 0, 0, 0.19);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
 }
 .forums-create p {
   text-align: center;

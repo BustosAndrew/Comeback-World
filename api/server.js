@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const cors = require('cors');
 
 // express config
 const app = express();
@@ -17,9 +18,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // express routers
-const userRouter = require('./routes/user');
+const userRouter = require('./routes/users');
+const comebacksRouter = require('./routes/comebacks');
 
+app.use(cors());
 app.use('/users', userRouter);
+app.use('/comebacks', comebacksRouter);
 
 app.get('/', (req, res) => {
     res.send('hello world');

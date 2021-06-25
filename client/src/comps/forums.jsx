@@ -22,7 +22,7 @@ export const Forums = () => {
                 </Link>
                 <Link className="forum-link" id="home-link" to="/">
                     <div className="forums-home">
-                        <p>HOME</p>
+                        <p style={{ fontSize: '1vw' }}>HOME</p>
                     </div>
                 </Link>
                 <Link id="view-link" className="forum-link" to="/user-threads">
