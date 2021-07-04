@@ -34,12 +34,12 @@ const assignToken = (res, user, maxAge = 2 * 7 * 24 * 60 * 60 * 1000) => {
     });
 };
 
-/**const clearToken = (res) => {
-*    return res.cookie('accessToken', 0, {
-*        httpOnly: true,
-*       maxAge: 0,
-*    });
-*};
+const clearToken = (res) => {
+    return res.cookie('accessToken', 0, {
+        httpOnly: true,
+        maxAge: 0,
+    });
+};
 
 /**
  * User Registration Endpoint:
@@ -176,12 +176,9 @@ router.post('/login', async (req, res) => {
  *  - clears user's accesstoken
  */
 router.post('/logout', (req, res) => {
-    res.cookie("token", "",{
-        httpOnly: true,
-        expires: new Date(0)
-        })
-        .send();
-    });
+    clearToken(res);
+    return res.json(new ResponseDTO(null, true));
+});
 
 /**
  * User Test Endpoint:
