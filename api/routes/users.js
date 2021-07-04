@@ -187,7 +187,7 @@ router.post('/logout', (req, res) => {
  *  - returns user if user is logged in
  *  - else returns error
  */
-router.get('/test', validateToken, (req, res) => {
+router.get('/user', validateToken, (req, res) => {
     res.json(req.user);
 });
 module.exports = router;

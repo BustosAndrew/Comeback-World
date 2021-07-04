@@ -3,14 +3,19 @@
     padding: 0;
 }
 
+/* :root {
+    --front-color: #8d0000;
+} */
+
 #signup {
     margin-top: 20px;
-    margin-right: 43%;
-    margin-left: 43%;
+    margin-right: 45%;
+    margin-left: 45%;
     text-decoration: none;
     color: whitesmoke;
     font-weight: bold;
     font-size: x-large;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 #signup:hover {
@@ -18,7 +23,7 @@
 }
 
 #signup p {
-    background-color: tomato;
+    background-color: #e30940;
     border-radius: 10px;
     padding: 10%;
 }
@@ -39,11 +44,11 @@
     margin-top: 100px;
     margin-right: 1%;
     margin-left: 1%;
-    background-color: tomato;
+    background-color: var(--front-color);
     border-radius: 10px;
     text-align: center;
     padding: 10%;
-    box-shadow: 2px 10px 25px black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 #ex1 {

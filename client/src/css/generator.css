@@ -5,46 +5,58 @@
 }
 .gen aside {
   float: left;
-  margin: 10% 7%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 10%;
+  background-color: #8d0000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
-  padding: 17%;
-  text-align: center;
+  padding: 5%;
+  max-height: 15vh;
 }
 .gen section {
   float: right;
-  margin: 10% 7%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 10%;
+  background-color: #8d0000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
-  padding: 17% 0;
-  height: 100%;
-  max-height: 400px;
-  max-width: 40%;
-  min-width: 35%;
   display: flex;
   flex-wrap: wrap;
+  min-height: 50vh;
+  max-height: 51vh;
+  min-width: 30vw;
+  max-width: 30vw;
   justify-content: flex-start;
   align-content: flex-start;
 }
+.gen section p {
+  position: relative;
+  top: 45%;
+  right: auto;
+  flex: 100%;
+  text-align: center;
+}
 
 .gen-btn {
-  margin: 0;
-  padding: 5%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  background-color: #e30940;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+}
+.gen-btn:hover {
+  cursor: pointer;
+}
+
+.gen-input {
+  color: white;
+  margin: 0 40%;
 }
 
 .comeback {
-  flex-basis: 100%;
-  text-align: center;
+  border: 0 solid white;
+  border-bottom: 1px;
+  margin-left: 1%;
 }
 
 /*# sourceMappingURL=generator.css.map */

@@ -17,10 +17,9 @@
   flex: 80%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
+  background-color: #8d0000;
   backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 .forums-container p {
@@ -142,10 +141,9 @@
   top: 1%;
   right: 2%;
   padding: 5%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #ffa984;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   z-index: 2;
   text-align: left;
@@ -153,10 +151,8 @@
 
 .forums-home {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e30940;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   padding: 25% 0;
   text-align: center;
@@ -170,16 +166,14 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e30940;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   align-self: center;
 }
 .forums-profile p {
   text-align: center;
-  margin: 42% auto;
-  padding: auto;
+  margin: auto;
+  padding: 37% 17%;
 }
 
 #view-profile {
@@ -189,10 +183,9 @@
 .forums-create {
   padding: 11%;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #e30940;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
 }
 .forums-create p {

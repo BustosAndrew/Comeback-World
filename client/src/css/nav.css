@@ -12,12 +12,12 @@
   font-size: 20px;
 }
 #login h3 {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: solid 2px rgba(255, 255, 255, 0.4);
+  background-color: #e30940;
   backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   border-radius: 25px;
   padding: 10px;
+  border-radius: 25px;
 }
 
 .left {
@@ -39,12 +39,8 @@ nav {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  border: 0.1px solid gray;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-left-width: 0;
-  border-bottom-width: 0.00001px;
   overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 }
 nav a {
   text-decoration: none;

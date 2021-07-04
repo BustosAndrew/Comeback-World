@@ -20,10 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // express routers
 const userRouter = require('./routes/users');
 const comebacksRouter = require('./routes/comebacks');
+const threadRouter = require('./routes/threads');
 
 app.use(cors());
 app.use('/users', userRouter);
 app.use('/comebacks', comebacksRouter);
+app.use('./threads', threadRouter);
 
 app.get('/', (req, res) => {
     res.send('hello world');
