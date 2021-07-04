@@ -27,7 +27,7 @@ const ThreadSchema = mongoose.Schema({
     },
 });
 
-const comment = new Schema({
+const comment = mongoose.Schema({
     commenter: 'string',
     content: 'string',
 });
