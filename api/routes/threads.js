@@ -92,7 +92,7 @@ router.put('/comment', validateToken, async (req, res) => {
     // check if comment is empty
     const newCommentErrors = [];
     if (!comment.trim()) {
-        newThreadErrors.push('Please include text in your comment.');
+        newCommentErrors.push('Please include text in your comment.');
     }
 
     if (newCommentErrors.length === 0) {
