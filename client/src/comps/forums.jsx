@@ -65,6 +65,7 @@ export const Forums = () => {
                                 display: 'inline-block',
                                 listStyle: 'none',
                                 color: '#6f0303',
+                                fontWeight: 'bold',
                             }}
                         >
                             <li>Filter by age or most upvoted.</li>
@@ -75,6 +76,7 @@ export const Forums = () => {
                                 display: 'inline-block',
                                 listStyle: 'none',
                                 color: '#6f0303',
+                                fontWeight: 'bold',
                             }}
                         >
                             <li>

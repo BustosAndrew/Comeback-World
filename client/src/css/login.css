@@ -5,7 +5,7 @@
     justify-content: center;
     margin: 3% 15%;
     height: 37em;
-    background-color: whitesmoke;
+    background-color: var(--front-color);
     border-radius: 100px;
     box-shadow: 0px 2px 30px, 0px -2px 30px;
 }
@@ -16,24 +16,25 @@
     flex-direction: column;
     justify-content: center;
     /* text-align: right; */
-    border: 1px solid black;
+    border: 1px solid white;
     border-left: 0;
     border-bottom: none;
     border-top: none;
-    padding: 5% 0;
+    /* padding: 5% 0; */
 }
 
 #login-home {
     flex: 30%;
     text-decoration: none;
-    background-color: tomato;
-    color: whitesmoke;
-    padding: 5% 5%;
+    background-color: var(--btn-color);
+    color: white;
+    padding: 5% 10%;
     border-radius: 5px;
     font-weight: bolder;
     font-size: 1.5rem;
-    margin-bottom: 5%;
-    margin-right: 15%;
+    /* margin-bottom: 5%; */
+    /* margin-right: 15%; */
+    margin: 0 10%;
     align-self: flex-start;
 }
 
@@ -47,15 +48,17 @@
 
 #login-title {
     margin: auto;
-    flex: 25%;
+    flex: 10%;
+    color: white;
 }
 
 #login-title + form {
-    margin: auto;
+    margin: 0 auto;
     text-align: left;
-    margin-bottom: 13%;
-    margin-top: 20%;
-    flex: 75%;
+    margin-bottom: 25%;
+    margin-top: 7%;
+    flex: 90%;
+    color: white;
 }
 
 .login-aside form input {
@@ -69,12 +72,13 @@
 }
 
 #login-submit {
-    padding: 15px 20%;
-    background-color: tomato;
+    padding: 15px 10%;
+    margin: 0 auto;
+    background-color: var(--btn-color);
     border: 0 none;
     cursor: pointer;
     border-radius: 5px;
-    color: whitesmoke;
+    color: white;
     font-weight: bold;
     font-size: 1.5em;
 }
@@ -83,6 +87,7 @@
     margin: auto;
     margin-top: 23%;
     flex: 25%;
+    color: white;
 }
 
 #signup-title + form {
@@ -91,6 +96,7 @@
     margin-bottom: 20%;
     margin-top: 7%;
     flex: 75%;
+    color: white;
 }
 
 .signup-section form input {
@@ -103,9 +109,9 @@
 }
 
 #signup-submit {
-    margin-left: 0;
+    margin-left: 10%;
     padding: 15px 13%;
-    background-color: tomato;
+    background-color: var(--btn-color);
     border: 0 none;
     cursor: pointer;
     border-radius: 5px;
