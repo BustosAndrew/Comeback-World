@@ -5,6 +5,7 @@ const ResponseDTO = require('../utils/responseDTO');
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 
 const validateToken = (req, res, next) => {
+    try {
     const { accessToken } = req.cookies;
 
     // if the request has no cookie
@@ -14,8 +15,8 @@ const validateToken = (req, res, next) => {
             id: token.payload.sub,
             fullName: token.payload.fullName,
             username: token.payload.username,
-        };
-    } else {
+        }};
+    } catch {
         res.status(401).json(
             new ResponseDTO(null, false, ['Please Login to access']),
         );
