@@ -22,11 +22,7 @@ export const Comeback_gen = () => {
     const getComebacks = (requests) => {
         for (let i = 0; i < requests; i++) {
             axios
-                .get(url + token, {
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                    },
-                })
+                .get(url + token)
                 .then((res) => setComebacks((arr) => [...arr, res.data]));
         }
     };
