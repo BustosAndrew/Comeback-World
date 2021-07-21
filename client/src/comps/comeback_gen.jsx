@@ -9,10 +9,14 @@ export const Comeback_gen = () => {
     const url = 'https://generatorfun.com/consumeapi.php?api=';
 
     useEffect(() => {
-        axios.get('http://localhost:5000/comebacks/comeback').then((res) => {
-            setToken(res.data);
-            console.log(res.data);
-        });
+        axios
+            .get(
+                'https://comeback-world-backend.herokuapp.com/comebacks/comeback',
+            )
+            .then((res) => {
+                setToken(res.data);
+                console.log(res.data);
+            });
     }, []);
 
     const getComebacks = (requests) => {
