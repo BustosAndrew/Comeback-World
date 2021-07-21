@@ -24,7 +24,8 @@ export const Comeback_gen = () => {
             axios
                 .get(url + token, {
                     headers: {
-                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Origin':
+                            'https://comebackworld.netlify.app',
                     },
                 })
                 .then((res) => setComebacks((arr) => [...arr, res.data]));
