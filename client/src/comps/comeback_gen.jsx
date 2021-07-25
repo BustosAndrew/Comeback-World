@@ -4,25 +4,14 @@ import axios from 'axios';
 
 export const Comeback_gen = () => {
     const [comebacks, setComebacks] = useState([]);
-    const [token, setToken] = useState(null);
     const [limit, setLimit] = useState(1);
-    const url = 'https://generatorfun.com/consumeapi.php?api=';
-
-    useEffect(() => {
-        axios
-            .get(
-                'https://comeback-world-backend.herokuapp.com/comebacks/comeback',
-            )
-            .then((res) => {
-                setToken(res.data);
-                console.log(res.data);
-            });
-    }, []);
 
     const getComebacks = (requests) => {
         for (let i = 0; i < requests; i++) {
             axios
-                .get(url + token)
+                .get(
+                    'https://comeback-world-backend.herokuapp.com/comebacks/comeback',
+                )
                 .then((res) => setComebacks((arr) => [...arr, res.data]));
         }
     };
