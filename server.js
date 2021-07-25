@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const corsOptions = {
-    origin: 'https://comebackworld.netlify.app/',
+    origin: 'https://comebackworld.netlify.app',
 };
 
 // express middlewares
