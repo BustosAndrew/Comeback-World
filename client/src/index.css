@@ -16,8 +16,13 @@ body {
 }
 
 :root {
+    --card-color: #f3f3f3;
+    --card-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+    --icon-color: #f3f3f3;
     --front-color: #8d0000;
     --btn-color: #e30940;
+    --font-color: #f3f3f3;
+    --dark-font: #000;
 }
 
 code {
