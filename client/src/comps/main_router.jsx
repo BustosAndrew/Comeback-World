@@ -1,7 +1,6 @@
 import { Home } from './home';
 import { About } from './about';
 import { Comeback_gen as Comeback_Gen } from './comeback_gen';
-import { signup as SignUp } from './signup';
 import Login from './login';
 import { error as Error } from './error';
 import { nav as Nav } from './nav';
@@ -24,9 +23,6 @@ export const main_router = () => {
                 </Route>
                 <Route path="/forums">
                     <Forums />
-                </Route>
-                <Route path="/signup">
-                    <SignUp />
                 </Route>
                 <Route path="/login">
                     <Login />

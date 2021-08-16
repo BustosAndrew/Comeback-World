@@ -3,58 +3,32 @@
     padding: 0;
 }
 
-/* :root {
-    --front-color: #8d0000;
-} */
-
-#signup {
-    margin-top: 20px;
-    margin-right: 45%;
-    margin-left: 45%;
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: x-large;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-}
-
-#signup:hover {
-    color: gray;
-}
-
-#signup p {
-    background-color: #e30940;
-    border-radius: 10px;
-    padding: 10%;
-}
-
-.home section {
-    display: flex;
-    flex-direction: column;
-}
-
-.home aside {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.home aside div {
-    min-width: 10px;
-    margin-top: 100px;
-    margin-right: 1%;
-    margin-left: 1%;
-    background-color: var(--front-color);
+#card {
+    margin: auto;
+    margin-top: 5%;
     border-radius: 10px;
     text-align: center;
-    padding: 10%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    background-color: var(--card-color);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    row-gap: 50px;
 }
 
-#ex1 {
-    flex: 50%;
+#intro {
+    margin-top: 5%;
 }
 
-#ex2 {
-    flex: 50%;
+#vids iframe {
+    margin: 1% auto;
+}
+
+#vids div:nth-child(1) {
+    margin-bottom: 5%;
+}
+
+#outro {
+    margin-bottom: 5%;
 }
