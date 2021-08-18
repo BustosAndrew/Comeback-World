@@ -7,8 +7,8 @@ export const About = () => {
                 <h1>
                     Comeback World: the site to change all things comeback :D
                 </h1>
+                <h2>Developed by multiple aspiring web developers.</h2>
                 <section>
-                    <h2>Developed by two aspiring web developers.</h2>
                     <h1>THE TEAM</h1>
                     <div className="imgs">
                         <img src="" alt="Andrew" />

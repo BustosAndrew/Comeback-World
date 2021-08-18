@@ -1,14 +1,22 @@
 .about main {
     text-align: center;
+    color: white;
+    margin-top: 8%;
 }
 
 .about main section {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .imgs {
     margin-top: 10%;
+    /* padding: auto 50%; */
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+}
+
+.imgs img {
+    margin: auto 10%;
 }

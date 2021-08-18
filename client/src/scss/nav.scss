@@ -7,11 +7,14 @@
     text-align: center;
     margin-right: 10px;
     align-self: flex-start;
+    margin-top: 1%;
 }
 
 .left {
+    margin-left: 10px;
     flex: auto;
     text-align: center;
+    margin-top: 1%;
 }
 
 .middle {
@@ -23,25 +26,27 @@
 .right {
     // flex: 15%;
     text-decoration: none;
-    text-align: right;
+    text-align: left;
     margin-left: 5%;
 }
 
 nav {
+    margin-top: 1%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    overflow: hidden;
+    // overflow: hidden;
     background-color: inherit;
     a {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        // margin: 20px 0;
         font-weight: bold;
         color: whitesmoke;
         font-size: 18px;
         display: inline-block;
         background-color: inherit;
         line-height: 1em;
+        text-decoration: none;
+        text-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.5);
         &:link {
             background-color: inherit;
         }
@@ -54,3 +59,7 @@ nav {
 #gen {
     box-shadow: var(--card-shadow);
 }
+
+// .icon {
+//     padding-top: 10%;
+// }
