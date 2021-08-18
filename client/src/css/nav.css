@@ -7,11 +7,14 @@
   text-align: center;
   margin-right: 10px;
   align-self: flex-start;
+  margin-top: 1%;
 }
 
 .left {
+  margin-left: 10px;
   flex: auto;
   text-align: center;
+  margin-top: 1%;
 }
 
 .middle {
@@ -21,26 +24,26 @@
 
 .right {
   text-decoration: none;
-  text-align: right;
+  text-align: left;
   margin-left: 5%;
 }
 
 nav {
+  margin-top: 1%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  overflow: hidden;
   background-color: inherit;
 }
 nav a {
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-weight: bold;
   color: whitesmoke;
   font-size: 18px;
   display: inline-block;
   background-color: inherit;
   line-height: 1em;
+  text-decoration: none;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 nav a:link {
   background-color: inherit;
