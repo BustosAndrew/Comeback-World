@@ -1,6 +1,6 @@
-import '../css/generator.css';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import "../css/generator.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Comeback_gen = () => {
     const [comebacks, setComebacks] = useState([]);
@@ -11,7 +11,7 @@ export const Comeback_gen = () => {
         for (let i = 0; i < requests; i++) {
             axios
                 .get(
-                    'https://comeback-world-backend.herokuapp.com/comebacks/comeback',
+                    "https://comeback-world-backend.herokuapp.com/comebacks/comeback"
                 )
                 .then((res) => setComebacks((arr) => [...arr, res.data]));
         }

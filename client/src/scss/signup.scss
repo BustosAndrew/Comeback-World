@@ -3,6 +3,7 @@
     align-items: flex-start;
     justify-content: center;
     margin: 5% auto;
+    margin-bottom: 0;
     height: 32em;
     max-width: 350px;
     background-color: var(--front-color);
@@ -10,16 +11,16 @@
     box-shadow: var(--card-shadow);
 }
 
-.login-aside {
+.signup-aside {
     text-align: center;
 }
 
-.login-aside form {
+.signup-aside form {
     margin: 25% auto;
     margin-bottom: 0;
 }
 
-.login-aside form input {
+.signup-aside form input {
     padding: 3% 5%;
     margin: 0 auto;
     margin-bottom: 5%;
@@ -28,11 +29,11 @@
     border-radius: 10px;
 }
 
-.login-aside form input:focus {
+.signup-aside form input:focus {
     outline: none;
 }
 
-#login-submit {
+#signup-submit {
     padding: 1px 30%;
     margin: 0 auto;
     background-color: #ea8080;
@@ -46,12 +47,12 @@
     box-shadow: var(--card-shadow);
 }
 
-.signup {
+.login {
     color: gray;
-    margin: 90% 0;
+    margin: 20% 0;
 }
 
-#signup-btn {
+#login-btn {
     color: #00bfff;
 }
 
