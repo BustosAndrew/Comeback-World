@@ -1,0 +1,71 @@
+.login-signup {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5% auto;
+  margin-bottom: 0;
+  height: 32em;
+  max-width: 350px;
+  background-color: var(--front-color);
+  border-radius: 50px;
+  box-shadow: var(--card-shadow);
+}
+
+.signup-aside {
+  text-align: center;
+}
+
+.signup-aside form {
+  margin: 25% auto;
+  margin-bottom: 0;
+}
+
+.signup-aside form input {
+  padding: 3% 5%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  display: block;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.signup-aside form input:focus {
+  outline: none;
+}
+
+#signup-submit {
+  padding: 1px 30%;
+  margin: 0 auto;
+  background-color: #ea8080;
+  border: 0 none;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--card-shadow);
+}
+
+.login {
+  color: gray;
+  margin: 20% 0;
+}
+
+#login-btn {
+  color: #00bfff;
+}
+
+.or {
+  font-weight: normal;
+}
+
+.or hr {
+  display: inline-block;
+  width: 30%;
+  margin: 5px 10px;
+  border: none;
+  border-top: 1px solid gray;
+}
+
+/*# sourceMappingURL=signup.css.map */

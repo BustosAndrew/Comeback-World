@@ -1,25 +1,24 @@
 .forums-container {
   display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+  min-height: 92vh;
+  margin: 0 14%;
 }
 .forums-container .menu {
-  margin: 5%;
-  float: left;
-  flex: 20%;
+  margin: 5% auto;
+  margin-bottom: 0;
+  flex: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .forums-container .thread-container {
-  margin: 5%;
-  float: right;
-  flex: 80%;
+  margin: 5% auto;
+  margin-bottom: 10%;
+  flex: 70%;
   display: flex;
   flex-direction: column;
-  background-color: #8d0000;
+  background-color: white;
   backdrop-filter: blur(5px);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
 }
 .forums-container p {
@@ -27,11 +26,6 @@
   font-weight: bolder;
 }
 
-@supports (backdrop-filter: none) {
-  .thread-container {
-    backdrop-filter: blur(100px);
-  }
-}
 .thrd {
   display: flex;
   flex-direction: row;
@@ -54,12 +48,13 @@
 }
 .thrd-content span {
   font-weight: normal;
-  color: white;
+  color: #a3a3a3;
 }
 
 .threads {
   display: flex;
   flex-direction: column;
+  color: #a3a3a3;
 }
 
 .thread-nav {
@@ -71,7 +66,9 @@
 #thread-prev {
   display: inline-block;
   margin-right: 5%;
-  color: #ffa984;
+  color: #e44242;
+  font-weight: bold;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 #thread-prev:hover {
   cursor: pointer;
@@ -79,7 +76,9 @@
 
 #thread-next {
   display: inline;
-  color: #ffa984;
+  color: #e44242;
+  font-weight: bold;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 #thread-next:hover {
   cursor: pointer;
@@ -88,15 +87,15 @@
 #thread-pgs {
   position: relative;
   text-align: center;
-  color: #ffa984;
+  color: #e44242;
+  font-weight: bold;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .filter-closed {
   position: absolute;
   top: 2%;
   right: 3%;
-  border: solid 1px #ffa984;
-  border-radius: 10px;
   padding: 0.5% 0.3%;
   padding-bottom: 0;
   z-index: 2;
@@ -104,20 +103,11 @@
 .filter-closed:hover {
   cursor: pointer;
 }
-.filter-closed hr {
-  margin-top: 10%;
-  width: 30px;
-  background-color: #ffa984;
-  border: none;
-  height: 1px;
-  margin-bottom: 25%;
-}
 
 .filter-opened {
   position: absolute;
   top: 2%;
   right: 3%;
-  font-size: xx-large;
   z-index: 3;
 }
 .filter-opened:hover {
@@ -132,7 +122,7 @@
   border: none;
 }
 
-.filter-hide-hrs {
+.filter-hide-text {
   display: none;
 }
 
@@ -140,83 +130,65 @@
   position: absolute;
   top: 1%;
   right: 2%;
-  padding: 5%;
-  border-radius: 50%;
-  background-color: #ffa984;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   z-index: 2;
-  text-align: left;
-}
-
-.forums-home {
-  border-radius: 20px;
-  background-color: #e30940;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
-  padding: 25% 0;
-  text-align: center;
-}
-
-#home-link {
-  margin: auto 32%;
-}
-
-.forums-profile {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: #e30940;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  align-self: center;
-}
-.forums-profile p {
-  text-align: center;
-  margin: auto;
-  padding: 37% 17%;
-}
-
-#view-profile {
-  margin: 0 auto;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 150px;
 }
 
 .forums-create {
-  padding: 11%;
-  border-radius: 20px;
-  border-radius: 50%;
-  background-color: #e30940;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
-}
-.forums-create p {
   text-align: center;
 }
 
+.filter-title {
+  margin: 5%;
+}
+
+.options input[type=checkbox] {
+  transform: scale(1.5);
+  border-radius: none;
+}
+
 #create-link {
-  margin: 0 10%;
-  margin-top: 5%;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-top: 20%;
+  text-align: center;
+}
+
+.create-thread {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .forum-link {
   text-decoration: none;
 }
 
-.login-status {
-  margin: 0 auto;
-  padding-top: 10%;
-}
-
-#view-status {
-  margin: 0 auto;
-  margin-top: 3%;
-}
-
 .view-threads {
-  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #view-link {
   margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .forums-container {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10%;
+    min-height: 0vh;
+  }
+  .forums-container .thread-container {
+    flex: 99%;
+    width: 90%;
+    height: 100%;
+    min-height: 100vh;
+  }
 }
 
 /*# sourceMappingURL=forums.css.map */

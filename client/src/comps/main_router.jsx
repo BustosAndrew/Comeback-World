@@ -1,11 +1,12 @@
-import { Home } from './home';
-import { About } from './about';
-import { Comeback_gen as Comeback_Gen } from './comeback_gen';
-import Login from './login';
-import { error as Error } from './error';
-import { nav as Nav } from './nav';
-import { Forums as Forums } from './forums';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from "./home";
+import { About } from "./about";
+import { Comeback_gen as Comeback_Gen } from "./comeback_gen";
+import Login from "./login";
+import { error as Error } from "./error";
+import { nav as Nav } from "./nav";
+import { Forums as Forums } from "./forums";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Signup as Signup } from "./signup";
 
 export const main_router = () => {
     return (
@@ -26,6 +27,9 @@ export const main_router = () => {
                 </Route>
                 <Route path="/login">
                     <Login />
+                </Route>
+                <Route path="/signup">
+                    <Signup />
                 </Route>
                 <Route path="/create-thread">
                     <div>create new thread</div>
