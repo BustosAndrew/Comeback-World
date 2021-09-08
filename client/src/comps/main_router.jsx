@@ -43,6 +43,7 @@ export const main_router = () => {
                 <Route path="/user-threads">
                     <div>your thread</div>
                 </Route>
+                <Route path="/user-profile"></Route>
                 <Route path="*">
                     <Error />
                 </Route>
