@@ -3,28 +3,27 @@
 }
 
 #login {
-    flex: 5%;
-    text-align: center;
-    margin-right: 10px;
-    align-self: flex-start;
-    margin-top: 1%;
+}
+
+#profile {
 }
 
 .left {
-    margin-left: 10px;
-    flex: auto;
+    margin-left: 5%;
+    flex: 15%;
     text-align: center;
     margin-top: 1%;
 }
 
 .middle {
-    // flex: 15%;
+    flex: 1%;
     text-decoration: none;
     text-align: center;
 }
 
 .right {
-    // flex: 15%;
+    margin-top: 0%;
+    flex: 15%;
     text-decoration: none;
     text-align: left;
     margin-left: 5%;
@@ -35,10 +34,8 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    // overflow: hidden;
     background-color: inherit;
     a {
-        // margin: 20px 0;
         font-weight: bold;
         color: whitesmoke;
         font-size: 18px;
@@ -59,7 +56,3 @@ nav {
 #gen {
     box-shadow: var(--card-shadow);
 }
-
-// .icon {
-//     padding-top: 10%;
-// }
