@@ -7,6 +7,7 @@ import { nav as Nav } from "./nav";
 import { Forums as Forums } from "./forums";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Signup as Signup } from "./signup";
+import { Profile as Profile } from "./profile";
 
 export const main_router = () => {
     return (
@@ -35,7 +36,7 @@ export const main_router = () => {
                     <div>create new thread</div>
                 </Route>
                 <Route path="/user-profile">
-                    <div>your profile</div>
+                    <Profile />
                 </Route>
                 <Route path="/user-status">
                     <div>your login status</div>
@@ -43,7 +44,6 @@ export const main_router = () => {
                 <Route path="/user-threads">
                     <div>your thread</div>
                 </Route>
-                <Route path="/user-profile"></Route>
                 <Route path="*">
                     <Error />
                 </Route>
