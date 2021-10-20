@@ -34,6 +34,14 @@
   left: 5%;
 }
 
+.info-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.info-details span {
+  color: #00b2fa;
+}
+
 .edit-prof {
   text-align: right;
   margin-top: 2%;

@@ -39,6 +39,14 @@ $filter-bg-color: white;
     left: 5%;
 }
 
+.info-details {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        color: #00b2fa;
+    }
+}
+
 .edit-prof {
     span {
         color: #00b2fa;

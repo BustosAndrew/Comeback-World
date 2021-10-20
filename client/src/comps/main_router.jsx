@@ -8,6 +8,8 @@ import { Forums as Forums } from "./forums";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Signup as Signup } from "./signup";
 import { Profile as Profile } from "./profile";
+import { MyThreads as MyThreads } from "./my_threads";
+import { NewThread as NewThread } from "./new_thread";
 
 export const main_router = () => {
     return (
@@ -33,7 +35,7 @@ export const main_router = () => {
                     <Signup />
                 </Route>
                 <Route path="/create-thread">
-                    <div>create new thread</div>
+                    <NewThread />
                 </Route>
                 <Route path="/user-profile">
                     <Profile />
@@ -42,7 +44,7 @@ export const main_router = () => {
                     <div>your login status</div>
                 </Route>
                 <Route path="/user-threads">
-                    <div>your thread</div>
+                    <MyThreads />
                 </Route>
                 <Route path="*">
                     <Error />
