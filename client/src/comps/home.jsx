@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export const Home = () => {
     return (
-        <div className="home">
-            <aside>
+        <div className="home" id="home">
+            <div id="no-footer">
                 <div id="card">
                     <div id="intro">
                         <h1 style={{ color: 'var(--dark-font)' }}>
@@ -17,13 +17,6 @@ export const Home = () => {
                     </div>
                     <div id="vids">
                         <iframe
-                            width="100%"
-                            height="315"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                        ></iframe>
-                        <iframe
-                            width="100%"
-                            height="315"
                             src="https://www.youtube.com/embed/tgbNymZ7vqY"
                         ></iframe>
                     </div>
@@ -34,10 +27,13 @@ export const Home = () => {
                         </h3>
                     </div>
                 </div>
-            </aside>
-            <footer style={{ textAlign: 'center' }}>
-                <p>The Comeback Trio &#169; 2021</p>
+            </div>
+
+           <footer>
+              <p>The Comeback Trio &#169; 2021</p>
             </footer>
-        </div>
+
+         </div>
     );
 };
+
