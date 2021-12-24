@@ -4,11 +4,11 @@ import '../css/error.css';
 export const error = () => {
     if (!(GetPath() === '/login'))
         return (
-            <div id="parent">
+            <div id="paren">
                 <main className="error-main">
-                    <h1>Error: page not found...</h1>
+                    <h1>Page not found...</h1>
                     <Link to="/">
-                        <h2># HOME</h2>
+                        <h2>Home</h2>
                     </Link>
                 </main>
             </div>
