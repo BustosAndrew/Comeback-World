@@ -1,16 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Thread = require('../models/Thread');
-const ResponseDTO = require('../utils/responseDTO');
-const validateToken = require('../middlewares/validateToken');
+const Thread = require("../models/Thread");
+const ResponseDTO = require("../utils/responseDTO");
+const validateToken = require("../middlewares/validateToken");
 
-router.post('/create_thread', validateToken, async (req, res) => {
+router.post("/create_thread", validateToken, async (req, res) => {
     const { title, caption } = req.body;
 
     // check if any fields are empty
     const newThreadErrors = [];
     if (!title) {
-        newThreadErrors.push('Please include a title in your post.');
+        newThreadErrors.push("Please include a title in your post.");
     }
 
     if (newThreadErrors.length === 0) {
@@ -33,10 +33,10 @@ router.post('/create_thread', validateToken, async (req, res) => {
     }
 });
 //for viewing any thread normally
-router.get('/thread', async (req, res) => {
+router.get("/thread", async (req, res) => {
     const { username, date } = req.body;
 
-    Thread.findOne({ author: username, date: date })
+    Thread.findOne({ author: username, date: date }) //TODO replace with id soon
         .then((thread) => {
             res.json(new ResponseDTO(thread, true));
         })
@@ -46,7 +46,7 @@ router.get('/thread', async (req, res) => {
         });
 });
 
-router.get('/forum_threads', async (req, res) => {
+router.get("/forum_threads", async (req, res) => {
     Thread.find({})
         .then((threads) => res.json(new ResponseDTO(threads, true)))
         .catch((mongoError) => {
@@ -55,7 +55,7 @@ router.get('/forum_threads', async (req, res) => {
         });
 });
 
-router.get('/user_threads', validateToken, async (req, res) => {
+router.get("/user_threads", validateToken, async (req, res) => {
     Thread.find({ author: req.user.username })
         .then((threads) => res.json(new ResponseDTO(threads, true)))
         .catch((mongoError) => {
@@ -64,12 +64,12 @@ router.get('/user_threads', validateToken, async (req, res) => {
         });
 });
 
-router.put('/edit_thread', validateToken, async (req, res) => {
+router.put("/edit_thread", validateToken, async (req, res) => {
     const { title, caption } = req.body;
 
     //check if title is empty
     const newEditErrors = [];
-    if (!title.trim()) newEditErrors.push('Please include text in your title.');
+    if (!title.trim()) newEditErrors.push("Please include text in your title.");
 
     if (newEditErrors.length === 0) {
         Thread.findOne({ author: req.user.username })
@@ -86,13 +86,13 @@ router.put('/edit_thread', validateToken, async (req, res) => {
     }
 });
 
-router.put('/comment', validateToken, async (req, res) => {
+router.put("/comment", validateToken, async (req, res) => {
     const { comment, date, author } = req.body;
 
     // check if comment is empty
     const newCommentErrors = [];
     if (!comment.trim()) {
-        newCommentErrors.push('Please include text in your comment.');
+        newCommentErrors.push("Please include text in your comment.");
     }
 
     if (newCommentErrors.length === 0) {
@@ -114,7 +114,7 @@ router.put('/comment', validateToken, async (req, res) => {
     }
 });
 
-router.put('/upvote', validateToken, async (req, res) => {
+router.put("/upvote", validateToken, async (req, res) => {
     const { upvote, username, date } = req.body;
     Thread.findOne({ author: username, date: date })
         .then((thread) => {
@@ -128,7 +128,7 @@ router.put('/upvote', validateToken, async (req, res) => {
         });
 });
 
-router.delete('/del_thread', validateToken, async (req, res) => {
+router.delete("/del_thread", validateToken, async (req, res) => {
     const { date } = req.body;
 
     Thread.deleteOne({ author: req.user.username, date: date })
