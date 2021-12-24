@@ -78,12 +78,12 @@ export const nav = () => {
     );
 };
 
-function InLoginPage() {
-    if (useLocation().pathname === "/login") return true;
-    else return false;
-}
+// function InLoginPage() {
+//     if (useLocation().pathname === "/login") return true;
+//     else return false;
+// }
 
-function InSignUpPage() {
-    if (useLocation().pathname === "/signup") return true;
-    else return false;
-}
+// function InSignUpPage() {
+//     if (useLocation().pathname === "/signup") return true;
+//     else return false;
+// }

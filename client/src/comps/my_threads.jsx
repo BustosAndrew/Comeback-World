@@ -178,7 +178,7 @@ export const MyThreads = () => {
                         </ul>
                     </div>
                     <div className="thrd">
-                        <img className="upvote" src="upvote.png" />
+                        <img alt="" className="upvote" src="upvote.png" />
                         <div className="thrd-content">
                             <span>Posted by: </span>
                             <p
