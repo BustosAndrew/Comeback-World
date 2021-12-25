@@ -1,6 +1,7 @@
 import "../css/forums.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { PaginatedItems } from "./pagination";
 
 export const Forums = () => {
     const [openPopup, setOpenPopup] = useState(false);
@@ -155,54 +156,32 @@ export const Forums = () => {
                         <span className="filter-title">Filter by</span>
                         <ul
                             style={{
-                                display: "inline-block",
+                                display: "inline",
                                 listStyle: "none",
                                 color: "#A3A3A3",
-                                margin: "15% 5%",
                             }}
                         >
                             <li className="options">
-                                <label>Most Upvoted</label> &nbsp;&nbsp;
+                                <label>&nbsp;&nbsp;Most Upvoted</label>
+                                &nbsp;&nbsp;
                                 <input type="checkbox"></input>
                             </li>
                             <li className="options">
-                                <label>Newest</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>&nbsp;&nbsp;Newest</label>&nbsp;&nbsp;
                                 <input type="checkbox"></input>
                             </li>
                             <li className="options">
-                                <label>Oldest</label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>&nbsp;&nbsp;Oldest</label>
+                                &nbsp;&nbsp;&nbsp;
                                 <input type="checkbox"></input>
                             </li>
                         </ul>
                     </div>
-                    <div className="thrd">
-                        <img alt="" className="upvote" src="upvote.png" />
-                        <div className="thrd-content">
-                            <span>Posted by: </span>
-                            <p
-                                style={{
-                                    color: "#a3a3a3",
-                                    fontWeight: "normal",
-                                }}
-                            >
-                                Title here...
-                            </p>
-                        </div>
-                    </div>
                 </div>
-                <div className="thread-nav">
-                    <span id="thread-prev">&#60; PREV</span>
-                    <span id="thread-next">NEXT &#62;</span>
-                    <br />
-                    <div id="thread-pgs">nums</div>
+                <div style={{ marginTop: "auto" }}>
+                    <PaginatedItems itemsPerPage={4} />
                 </div>
             </div>
         </div>
     );
 };
-
-// LoadNextPage()
-
-// LoadPreviousPage()

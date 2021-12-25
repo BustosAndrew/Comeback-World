@@ -30,8 +30,7 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  width: 100%;
-  height: 100px;
+  width: 20%;
 }
 
 .upvote {
@@ -44,7 +43,7 @@
 }
 
 .thrd-content {
-  flex: 98%;
+  flex: 100%;
 }
 .thrd-content span {
   font-weight: normal;
@@ -55,41 +54,6 @@
   display: flex;
   flex-direction: column;
   color: #a3a3a3;
-}
-
-.thread-nav {
-  margin-top: auto;
-  padding: 2% 20%;
-  text-align: center;
-}
-
-#thread-prev {
-  display: inline-block;
-  margin-right: 5%;
-  color: #e44242;
-  font-weight: bold;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-#thread-prev:hover {
-  cursor: pointer;
-}
-
-#thread-next {
-  display: inline;
-  color: #e44242;
-  font-weight: bold;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-#thread-next:hover {
-  cursor: pointer;
-}
-
-#thread-pgs {
-  position: relative;
-  text-align: center;
-  color: #e44242;
-  font-weight: bold;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .filter-closed {
@@ -181,13 +145,12 @@
     flex-direction: column;
     margin: auto;
     margin-top: 10%;
-    min-height: 0vh;
   }
   .forums-container .thread-container {
-    flex: 99%;
+    flex: 5%;
     width: 90%;
-    height: 100%;
-    min-height: 100vh;
+    height: 0%;
+    min-height: 10vh;
   }
 }
 
