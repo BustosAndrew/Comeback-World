@@ -74,8 +74,8 @@ router.put("/edit_thread", validateToken, async (req, res) => {
     if (newEditErrors.length === 0) {
         Thread.findOne({ author: req.user.username })
             .then((thread) => {
-                (thread.caption = caption.trim()),
-                    (thread.title = title.trim());
+                thread.caption = caption.trim();
+                thread.title = title.trim();
                 thread.save();
                 res.json(new ResponseDTO(thread, true));
             })
