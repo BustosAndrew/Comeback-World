@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ThreadSchema = mongoose.Schema({
     author: {
@@ -28,9 +28,9 @@ const ThreadSchema = mongoose.Schema({
 });
 
 const comment = mongoose.Schema({
-    commenter: 'string',
-    content: 'string',
+    commenter: "string",
+    content: "string",
 });
 
-const Thread = mongoose.model('Thread', ThreadSchema);
+const Thread = mongoose.model("Thread", ThreadSchema);
 module.exports = Thread;

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 mongoose
     .connect(process.env.DB_CONNECTION_STRING, {
@@ -7,7 +7,7 @@ mongoose
         useCreateIndex: true,
     })
     .then(() => {
-        console.log('db connected');
+        console.log("db connected");
     })
     .catch((err) => {
         console.error(err);
