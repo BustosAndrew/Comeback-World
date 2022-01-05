@@ -28,7 +28,11 @@ export const Signup = () => {
                         placeholder="Confirm Password"
                     />
                     <br />
-                    <input type="submit" value="Sign Up" id="signup-submit" />
+                    <input
+                        type="submit"
+                        value="Create Account"
+                        id="signup-submit"
+                    />
                 </form>
                 <div className="login">
                     <h4 className="or">

@@ -34,7 +34,7 @@
 }
 
 #signup-submit {
-  padding: 1px 30%;
+  padding: 1px 10px;
   margin: 0 auto;
   background-color: #ea8080;
   border: 0 none;
@@ -49,7 +49,7 @@
 
 .login {
   color: gray;
-  margin: 20% 0;
+  margin: 5% 0;
 }
 
 #login-btn {

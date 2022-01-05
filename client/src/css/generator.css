@@ -1,6 +1,7 @@
 .gen .container {
-  margin: 5% 25%;
-  padding: 7% 10%;
+  margin: 2% auto;
+  width: 70vw;
+  padding: 2% 5%;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
@@ -10,6 +11,7 @@
   border-radius: 20px;
   margin: 0 auto;
   height: 40vh;
+  width: 40vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -17,16 +19,15 @@
 }
 
 .top-hr {
-  margin-bottom: 10%;
-  width: 125%;
-  margin-left: -13%;
-  border: none;
+  margin: auto;
+  margin-bottom: 3%;
+  width: 75%;
   border-top: 1px solid gray;
 }
 
 .low-hr {
-  width: 125%;
-  margin-left: -13%;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .gen-input {
