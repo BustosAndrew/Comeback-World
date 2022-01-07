@@ -58,6 +58,9 @@ $filter-bg-color: white;
     display: flex;
     flex-direction: column;
     color: #a3a3a3;
+    position: relative;
+    left: 0;
+    right: 0;
 }
 
 .filter-closed {
