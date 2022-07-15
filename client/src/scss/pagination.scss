@@ -33,7 +33,7 @@
 }
 
 .page-nav {
-    margin: auto 28%;
+    margin: 0 28%;
 }
 
 @media (max-width: 768px) {
@@ -41,5 +41,11 @@
         font-size: 1rem;
         margin: 1rem;
         margin-top: 80%;
+    }
+
+    .items {
+        position: absolute;
+        top: 5%;
+        left: 2%;
     }
 }
