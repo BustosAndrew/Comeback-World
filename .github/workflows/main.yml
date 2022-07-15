@@ -9,14 +9,6 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Installing Front End Dependencies
-              working-directory: ./client
-              run: npm ci
-
-            - name: Front End Linter
-              working-directory: ./client
-              run: npx eslint ./src --ext .js
-
             - name: Installing Back End Dependencies
               working-directory: ./api
               run: npm ci
