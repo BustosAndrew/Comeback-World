@@ -30,7 +30,7 @@ const threadRouter = require('./routes/threads');
 app.use(cors());
 app.use('/users', userRouter);
 app.use('/comebacks', comebacksRouter);
-app.use('./threads', threadRouter);
+app.use('/threads', threadRouter);
 
 app.get('/', (req, res) => {
     res.send('hello world');
