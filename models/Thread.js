@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
 
-const comment = mongoose.Schema({
-    commenter: 'string',
-    content: 'string',
-});
-
 const ThreadSchema = mongoose.Schema({
     author: {
         type: String,
@@ -19,7 +14,7 @@ const ThreadSchema = mongoose.Schema({
         required: false,
     },
     comments: {
-        type: Array,
+        type: [{commenter: String, content: String}],
         required: false,
     },
     upvotes: {
