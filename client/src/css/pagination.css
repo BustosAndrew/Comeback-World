@@ -41,7 +41,7 @@
     margin-top: 80%;
   }
   .items {
-    position: absolute;
+    position: relative;
     top: 5%;
     left: 2%;
   }
