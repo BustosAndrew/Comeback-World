@@ -2,7 +2,7 @@ import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import "../css/pagination.css";
 
-export const PaginatedItems = ({ itemsPerPage, numOfItems, itemsHandler }) => {
+export const PaginatedItems = ({ itemsPerPage, numOfItems }) => {
     const [pageCount, setPageCount] = useState(0);
     // Here we use item offsets; we could also use page offsets
     // following the API or data you're working with.
@@ -10,8 +10,8 @@ export const PaginatedItems = ({ itemsPerPage, numOfItems, itemsHandler }) => {
 
     useEffect(() => {
         // Fetch items from another resources.
-        const endOffset = itemOffset + itemsPerPage;
-        itemsHandler(itemOffset, endOffset);
+        //const endOffset = itemOffset + itemsPerPage;
+        //itemsHandler(itemOffset, endOffset);
         setPageCount(Math.ceil(numOfItems / itemsPerPage));
     }, [itemOffset, itemsPerPage, numOfItems]);
 

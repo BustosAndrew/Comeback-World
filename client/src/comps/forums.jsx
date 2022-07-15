@@ -8,11 +8,15 @@ export const Forums = () => {
     const [openPopup, setOpenPopup] = useState(false);
     const [currentItems, setCurrentItems] = useState([]);
 
-    const itemsHandler = (itemOffset, endOffset) => {
-        setCurrentItems(
-            currentItems && currentItems.slice(itemOffset, endOffset)
-        );
-    };
+    // const itemsHandler = (itemOffset, endOffset) => {
+    //     setCurrentItems(
+    //         currentItems && currentItems.slice(itemOffset, endOffset)
+    //     );
+    // };
+
+    // const renderThreads = useCallback(() => {
+    //     itemsHandler();
+    // }, [currentItems]);
 
     useEffect(() => {
         axios
@@ -216,7 +220,7 @@ export const Forums = () => {
                 <div style={{ margin: "auto auto 0 auto", marginTop: "auto" }}>
                     <PaginatedItems
                         itemsPerPage={4}
-                        itemsHandler={itemsHandler}
+                        // itemsHandler={itemsHandler}
                         numOfItems={(currentItems && currentItems.length) || 1}
                     />
                 </div>
