@@ -10,7 +10,7 @@ jobs:
             - uses: actions/checkout@v2
 
             - name: Installing Back End Dependencies
-              working-directory: ./api
+              working-directory: ./
               run: npm ci
 
             - name: Backend Linter
