@@ -7,7 +7,7 @@ export default function login() {
     };
 
     return (
-        <main className="login-signup">
+        <main className="login-card">
             <aside className="login-aside">
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="username" placeholder="Username" />

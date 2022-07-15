@@ -7,7 +7,7 @@ export const Signup = () => {
     };
 
     return (
-        <main className="login-signup">
+        <main className="signup-card">
             <aside className="signup-aside">
                 <form onSubmit={handleSubmit}>
                     <input

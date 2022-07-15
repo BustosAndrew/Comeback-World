@@ -6,7 +6,7 @@
   margin-left: 5%;
   flex: 15%;
   text-align: center;
-  margin-top: 0%;
+  margin-top: 1%;
 }
 
 .middle {
@@ -39,9 +39,6 @@ nav a {
   line-height: 1em;
   text-decoration: none;
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-}
-nav a:link {
-  background-color: inherit;
 }
 nav:hover {
   color: gray;

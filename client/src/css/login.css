@@ -1,9 +1,9 @@
-.login-signup {
+.login-card {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    margin: 5% auto;
-    height: 32em;
+    margin: 2rem auto;
+    margin-top: 3rem;
+    height: 30em;
     max-width: 350px;
     background-color: var(--front-color);
     border-radius: 50px;
@@ -15,14 +15,13 @@
 }
 
 .login-aside form {
-    margin: 25% auto;
+    margin: 10% auto;
     margin-bottom: 0;
 }
 
 .login-aside form input {
     padding: 3% 5%;
     margin: 0 auto;
-    margin-bottom: 5%;
     display: block;
     border: 1px solid gray;
     border-radius: 10px;

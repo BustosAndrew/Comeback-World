@@ -8,12 +8,14 @@ const Items = ({ currentItems }) => {
     return (
         <div className="items">
             {currentItems &&
-                currentItems.map((item) => (
-                    <div className="thrd">
-                        <img alt="" className="upvote" src="upvote.png" />
-                        <div className="thrd-content">
-                            <h3>Item #{item}</h3>
-                        </div>
+                currentItems.map((item, indx) => (
+                    <div key={indx} className="thrd">
+                        <img
+                            alt=""
+                            className="upvote"
+                            src="src/img/blank_profile.jpeg"
+                        />
+                        <h3>Item #{item}</h3>
                     </div>
                 ))}
         </div>
@@ -61,7 +63,7 @@ export const PaginatedItems = ({ itemsPerPage }) => {
                     breakLabel="..."
                     breakClassName="page-item"
                     breakLinkClassName="page-link page"
-                    containerClassName="mt-auto pagination justify-content-center align-items-end"
+                    containerClassName="pagination"
                     renderOnZeroPageCount={null}
                 />
             </div>

@@ -4,7 +4,7 @@
 }
 
 #no-footer {
-    min-height: calc(100vh - 95px); 
+    min-height: calc(100vh - 95px);
 }
 
 footer {
@@ -16,8 +16,6 @@ footer {
     color: white;
     text-align: center;
     padding: 1% 0 1% 0;
-   
-
 }
 
 footer p {

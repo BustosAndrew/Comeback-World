@@ -23,6 +23,7 @@ $filter-bg-color: white;
         backdrop-filter: blur(5px);
         box-shadow: 0 5px 4px rgba($color: #000000, $alpha: 0.25);
         border-radius: 25px;
+        justify-content: space-around;
     }
     p {
         color: white;
@@ -34,7 +35,7 @@ $filter-bg-color: white;
     display: flex;
     flex-direction: row;
     text-align: left;
-    width: 20%;
+    width: 10rem;
 }
 
 .upvote {
@@ -42,8 +43,7 @@ $filter-bg-color: white;
     margin-left: 3%;
     margin-right: 3%;
     height: 27px;
-    width: auto;
-    flex: 2%;
+    width: 27px;
 }
 
 .thrd-content {

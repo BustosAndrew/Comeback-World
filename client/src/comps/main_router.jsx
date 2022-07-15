@@ -16,7 +16,7 @@ export const main_router = () => {
         <Router>
             <Nav />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route index element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/comeback_gen" element={<ComebackGen />} />
                 <Route path="/forums" element={<Forums />} />
