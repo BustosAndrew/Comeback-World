@@ -10,12 +10,8 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-const corsOptions = {
-    origin: 'https://comebackworld.netlify.app',
-};
-
 // express middlewares
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,7 +23,6 @@ const userRouter = require('./routes/users');
 const comebacksRouter = require('./routes/comebacks');
 const threadRouter = require('./routes/threads');
 
-app.use(cors());
 app.use('/users', userRouter);
 app.use('/comebacks', comebacksRouter);
 app.use('/threads', threadRouter);
