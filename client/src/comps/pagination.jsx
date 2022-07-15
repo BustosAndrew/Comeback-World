@@ -1,5 +1,5 @@
 import ReactPaginate from "react-paginate";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/pagination.css";
 
 const items = [...Array(33).keys()];
