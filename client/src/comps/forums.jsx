@@ -178,7 +178,7 @@ export const Forums = () => {
                         </ul>
                     </div>
                 </div>
-                <div style={{ marginTop: "auto" }}>
+                <div style={{ margin: "auto auto 0 auto", marginTop: "auto" }}>
                     <PaginatedItems itemsPerPage={4} />
                 </div>
             </div>

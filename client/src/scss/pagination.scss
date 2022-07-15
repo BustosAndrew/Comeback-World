@@ -32,20 +32,15 @@
     left: 2%;
 }
 
-.page-nav {
-    margin: 0 28%;
-}
-
 @media (max-width: 768px) {
     .page-nav {
         font-size: 1rem;
-        margin: 1rem;
         margin-top: 80%;
     }
 
     .items {
-        position: relative;
+        position: absolute;
         top: 5%;
-        left: 2%;
+        left: 0;
     }
 }
