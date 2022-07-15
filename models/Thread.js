@@ -19,7 +19,7 @@ const ThreadSchema = mongoose.Schema({
         required: false,
     },
     comments: {
-        type: mongoose.Types.Array,
+        type: Array,
         required: false,
     },
     upvotes: {
@@ -30,7 +30,7 @@ const ThreadSchema = mongoose.Schema({
         type: Date,
         required: true,
     },
-});
+}, {collection: 'Thread'});
 
 const Thread = mongoose.model('Thread', ThreadSchema);
 module.exports = Thread;
