@@ -19,7 +19,7 @@ const ThreadSchema = mongoose.Schema({
         required: false,
     },
     comments: {
-        type: [comment],
+        type: mongoose.Types.Array,
         required: false,
     },
     upvotes: {
