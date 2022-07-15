@@ -1,5 +1,10 @@
 const mongoose = require("mongoose");
 
+const comment = mongoose.Schema({
+    commenter: "string",
+    content: "string",
+});
+
 const ThreadSchema = mongoose.Schema({
     author: {
         type: String,
@@ -25,11 +30,6 @@ const ThreadSchema = mongoose.Schema({
         type: Date,
         required: true,
     },
-});
-
-const comment = mongoose.Schema({
-    commenter: "string",
-    content: "string",
 });
 
 const Thread = mongoose.model("Thread", ThreadSchema);

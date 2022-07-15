@@ -2,29 +2,7 @@ import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import "../css/pagination.css";
 
-const items = [...Array(33).keys()];
-
-const Items = ({ currentItems }) => {
-    return (
-        <div className="items">
-            {currentItems &&
-                currentItems.map((item, indx) => (
-                    <div key={indx} className="thrd">
-                        <img
-                            alt=""
-                            className="upvote"
-                            src="src/img/blank_profile.jpeg"
-                        />
-                        <h3>Item #{item}</h3>
-                    </div>
-                ))}
-        </div>
-    );
-};
-
-export const PaginatedItems = ({ itemsPerPage }) => {
-    // We start with an empty list of items.
-    const [currentItems, setCurrentItems] = useState(null);
+export const PaginatedItems = ({ itemsPerPage, numOfItems, itemsHandler }) => {
     const [pageCount, setPageCount] = useState(0);
     // Here we use item offsets; we could also use page offsets
     // following the API or data you're working with.
@@ -33,19 +11,18 @@ export const PaginatedItems = ({ itemsPerPage }) => {
     useEffect(() => {
         // Fetch items from another resources.
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(items.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(items.length / itemsPerPage));
+        itemsHandler(itemOffset, endOffset);
+        setPageCount(Math.ceil(numOfItems / itemsPerPage));
     }, [itemOffset, itemsPerPage]);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % items.length;
+        const newOffset = (event.selected * itemsPerPage) % numOfItems;
         setItemOffset(newOffset);
     };
 
     return (
         <div>
-            <Items currentItems={currentItems} />
             <div className="page-nav">
                 <ReactPaginate
                     nextLabel="next >"

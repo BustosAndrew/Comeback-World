@@ -1,10 +1,26 @@
 import "../css/forums.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { PaginatedItems } from "./pagination";
 
 export const Forums = () => {
     const [openPopup, setOpenPopup] = useState(false);
+    const [currentItems, setCurrentItems] = useState(null);
+
+    const itemsHandler = (itemOffset, endOffset) => {
+        setCurrentItems(
+            currentItems && currentItems.slice(itemOffset, endOffset)
+        );
+    };
+
+    useEffect(() => {
+        axios
+            .get(
+                "https://comeback-world-backend.herokuapp.com/threads/forum_threads"
+            )
+            .then((res) => setCurrentItems((arr) => [...arr, res.data]));
+    });
 
     return (
         <div className="forums-container">
@@ -178,8 +194,25 @@ export const Forums = () => {
                         </ul>
                     </div>
                 </div>
+                <div className="items">
+                    {currentItems &&
+                        currentItems.map((item, indx) => (
+                            <div key={indx} className="thrd">
+                                <img
+                                    alt=""
+                                    className="upvote"
+                                    src="src/img/blank_profile.jpeg"
+                                />
+                                <h3>Item #{item}</h3>
+                            </div>
+                        ))}
+                </div>
                 <div style={{ margin: "auto auto 0 auto", marginTop: "auto" }}>
-                    <PaginatedItems itemsPerPage={4} />
+                    <PaginatedItems
+                        itemsPerPage={4}
+                        itemsHandler={itemsHandler}
+                        numOfItems={(currentItems && currentItems.length) || 1}
+                    />
                 </div>
             </div>
         </div>

@@ -13,4 +13,4 @@ mongoose
         console.error(err);
     });
 
-module.export = mongoose;
+module.exports = mongoose;
