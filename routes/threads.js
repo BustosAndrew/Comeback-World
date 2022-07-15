@@ -51,9 +51,7 @@ router.get('/forum_threads', async (req, res) => {
         .then((threads) => res.json(new ResponseDTO(threads, true)))
         .catch((mongoError) => {
             console.error(mongoError);
-            const err = new ResponseDTO(null, false, null);
-            err.pushMessage(mongoError);
-            res.status(500).json(err);
+            res.status(500).json(new ResponseDTO(null, false, mongoError));
         });
 });
 
@@ -62,9 +60,7 @@ router.get('/user_threads', validateToken, async (req, res) => {
         .then((threads) => res.json(new ResponseDTO(threads, true)))
         .catch((mongoError) => {
             console.error(mongoError);
-            const err = new ResponseDTO(null, false, null);
-            err.pushMessage(mongoError);
-            res.status(500).json(err);
+            res.status(500).json(new ResponseDTO(null, false, mongoError));
         });
 });
 
