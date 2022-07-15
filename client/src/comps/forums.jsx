@@ -6,7 +6,7 @@ import { PaginatedItems } from "./pagination";
 
 export const Forums = () => {
     const [openPopup, setOpenPopup] = useState(false);
-    const [currentItems, setCurrentItems] = useState(null);
+    const [currentItems, setCurrentItems] = useState([]);
 
     const itemsHandler = (itemOffset, endOffset) => {
         setCurrentItems(
@@ -19,8 +19,14 @@ export const Forums = () => {
             .get(
                 "https://comeback-world-backend.herokuapp.com/threads/forum_threads"
             )
-            .then((res) => setCurrentItems((arr) => [...arr, res.data]));
-    });
+            .then((res) => {
+                //console.log(res.data.data);
+                let newArr = res.data.data;
+                //setCurrentItems((arr) => [...arr, res.data]);
+                setCurrentItems(newArr);
+            })
+            .catch((err) => console.log(err));
+    }, []);
 
     return (
         <div className="forums-container">
@@ -196,14 +202,14 @@ export const Forums = () => {
                 </div>
                 <div className="items">
                     {currentItems &&
-                        currentItems.map((item, indx) => (
+                        currentItems.map((data, indx) => (
                             <div key={indx} className="thrd">
                                 <img
                                     alt=""
                                     className="upvote"
                                     src="src/img/blank_profile.jpeg"
                                 />
-                                <h3>Item #{item}</h3>
+                                <h3>{data.title}</h3>
                             </div>
                         ))}
                 </div>

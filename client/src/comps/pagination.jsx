@@ -13,7 +13,7 @@ export const PaginatedItems = ({ itemsPerPage, numOfItems, itemsHandler }) => {
         const endOffset = itemOffset + itemsPerPage;
         itemsHandler(itemOffset, endOffset);
         setPageCount(Math.ceil(numOfItems / itemsPerPage));
-    }, [itemOffset, itemsPerPage]);
+    }, [itemOffset, itemsPerPage, numOfItems]);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
